@@ -1,0 +1,22 @@
+.mcp_api_key
+# Auto-generated from .mcp_api_key — contains secret, never commit
+mcp_apikey_embedded.h
+**/mcp_apikey_embedded.h
+# WiFi SSID / password (see .wifi_config.example) and generated header
+.wifi_config
+**/wifi_config_embedded.h
+# Claude Code working directory (local agent metadata)
+.claude/
+CLAUDE.md
+# MCP server config (absolute paths, per-machine)
+.mcp.json
+# Build artifacts
+*.elf
+*.uf2
+*.bin
+*.map
+*.o
+*.d
+
+# デバッグ認証 (DA) の秘密鍵と証明書 (tools/da/make_da_certs.py で作る。公開しないこと)
+.da*/

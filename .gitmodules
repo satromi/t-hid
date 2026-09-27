@@ -1,0 +1,28 @@
+[submodule "mtk3_bsp"]
+	path = mtk3_bsp
+	url = https://github.com/tron-forum/mtk3_bsp.git
+	branch = pico_rp2040
+[submodule "lib/cjson"]
+	path = lib/cjson
+	url = https://github.com/DaveGamble/cJSON.git
+[submodule "lib/btstack"]
+	path = lib/btstack
+	url = https://github.com/bluekitchen/btstack.git
+[submodule "lib/cyw43-driver"]
+	path = lib/cyw43-driver
+	url = https://github.com/georgerobotics/cyw43-driver.git
+[submodule "lib/ioLibrary"]
+	path = lib/ioLibrary
+	url = https://github.com/Wiznet/ioLibrary_Driver.git
+[submodule "mtk3_bsp2"]
+	path = mtk3_bsp2
+	url = https://github.com/tron-forum/mtk3_bsp2.git
+[submodule "lib/wasm3"]
+	path = lib/wasm3
+	url = https://github.com/wasm3/wasm3
+[submodule "lib/micro-ecc"]
+	path = lib/micro-ecc
+	url = https://github.com/kmackay/micro-ecc.git
+[submodule "lib/pico-tflmicro"]
+	path = lib/pico-tflmicro
+	url = https://github.com/raspberrypi/pico-tflmicro

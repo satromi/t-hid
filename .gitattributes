@@ -1,0 +1,50 @@
+# Normalize line endings for all text files.
+# Git stores LF internally; Windows checkouts use LF as well (no CRLF conversion).
+# This eliminates the "LF will be replaced by CRLF" warnings from core.autocrlf.
+
+# Source code
+*.c    text eol=lf
+*.h    text eol=lf
+*.cpp  text eol=lf
+*.hpp  text eol=lf
+*.S    text eol=lf
+*.s    text eol=lf
+*.ld   text eol=lf
+
+# Build system
+*.mk       text eol=lf
+Makefile   text eol=lf
+makefile   text eol=lf
+*.cmake    text eol=lf
+
+# Scripts
+*.sh   text eol=lf
+*.py   text eol=lf
+
+# Docs / config / patches
+*.md      text eol=lf
+*.txt     text eol=lf
+*.json    text eol=lf
+*.yml     text eol=lf
+*.yaml    text eol=lf
+*.patch   text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+.gitmodules text eol=lf
+
+# Binary assets (never diff / never convert)
+*.uf2  binary
+*.bin  binary
+*.elf  binary
+*.hex  binary
+*.o    binary
+*.a    binary
+*.so   binary
+*.dll  binary
+*.exe  binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.pdf  binary

@@ -1,0 +1,25 @@
+diff --git a/src/hci.c b/src/hci.c
+index 3720c557e..bf938666c 100644
+--- a/src/hci.c
++++ b/src/hci.c
+@@ -5096,6 +5096,20 @@ static void packet_handler(uint8_t packet_type, uint8_t *packet, uint16_t size){
+         default:
+             break;
+     }
++
++    /*
++     * μT-Kernel 向け修正:
++     * ACL データ処理後も hci_run() を呼んで、キューに溜まった
++     * ATT レスポンス等の送信を即座にトリガーする。
++     *
++     * event_handler() は末尾で hci_run() を呼ぶが、
++     * acl_handler() は呼ばない。cyw43_poll() 内から
++     * 再帰ロックで HCI データを処理する構成なら問題にならないが、
++     * μT-Kernel の非再帰ロックではこのパスが必要。
++     */
++    if (packet_type == HCI_ACL_DATA_PACKET) {
++        hci_run();
++    }
+ }
+ 
+ /**

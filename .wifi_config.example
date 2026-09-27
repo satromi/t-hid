@@ -1,0 +1,7 @@
+# WiFi 認証情報 (Pico W の WiFi 構成用)
+# このファイルを .wifi_config という名前でコピーして値を書き換える。
+# .wifi_config は .gitignore 済みなのでコミットされない。
+ssid=MyNetwork
+psk=my-password
+# auth=open / wpa2 / wpa3 (省略時 wpa2、psk が空なら open)
+auth=wpa2

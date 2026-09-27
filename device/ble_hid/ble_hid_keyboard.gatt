@@ -1,0 +1,16 @@
+PRIMARY_SERVICE, GAP_SERVICE
+CHARACTERISTIC, GAP_DEVICE_NAME, READ, "TK Keyboard"
+// GAP Appearance: Keyboard = 0x03C1
+CHARACTERISTIC, GAP_APPEARANCE, READ, C1 03
+
+// Battery Service
+#import <battery_service.gatt>
+
+// Device Information Service
+#import <device_information_service.gatt>
+
+// HID Service
+#import <hids.gatt>
+
+PRIMARY_SERVICE, GATT_SERVICE
+CHARACTERISTIC, GATT_DATABASE_HASH, READ,
